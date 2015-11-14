@@ -9,6 +9,8 @@ This repository holds examples for the four different ways of implementing scrol
 
 `PureCodeViewController` is built using just plain layout constraints.
 
+`LayoutMarginsRespectingStackView` is an `IBDesignable` `UIStackView` subclass which sets its `layoutMarginsRelativeArrangement` property to `true` because of [Radar 21630496](https://openradar.appspot.com/21630496)
+
 ## Requirements
 
 * Xcode 7 & up
