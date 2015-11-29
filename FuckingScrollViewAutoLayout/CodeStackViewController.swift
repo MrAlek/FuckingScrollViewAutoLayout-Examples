@@ -12,7 +12,7 @@ class StackCodeViewController : UIViewController {
     
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = UIColor.whiteColor()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.preservesSuperviewLayoutMargins = true
         return scrollView
     }()
@@ -43,21 +43,44 @@ class StackCodeViewController : UIViewController {
     }()
     
     override func loadView() {
-        view = scrollView
+        view = UIView()
+        view.backgroundColor = UIColor.whiteColor()
         
+        // Step 1: Place scroll view
+        view.addSubview(scrollView)
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-0-[scrollView]-0-|",
+            options: [],
+            metrics: nil,
+            views: ["scrollView": scrollView])
+        )
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[scrollView]-0-|",
+            options: [],
+            metrics: nil,
+            views: ["scrollView": scrollView])
+        )
+        
+        // Step 2: Place stack view
         scrollView.addSubview(stackView)
         scrollView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-0-[stackView]-0-|",
             options: [],
             metrics: nil,
-            views: ["stackView": stackView]))
+            views: ["stackView": stackView])
+        )
         scrollView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
-            "V:|-[stackView]-0-|",
+            "V:|-0-[stackView]-0-|",
             options: [],
             metrics: nil,
-            views: ["stackView": stackView]))
+            views: ["stackView": stackView])
+        )
+        stackView.layoutMargins = stackView.layoutMargins // Fixes top margin (rdar://XXXX)
+        
+        // Step 3: Vertical scrolling
         scrollView.addConstraint(scrollView.widthAnchor.constraintEqualToAnchor(stackView.widthAnchor))
         
+        // Step 4: Add content
         stackView.addArrangedSubview(label)
         stackView.addArrangedSubview(button)
     }

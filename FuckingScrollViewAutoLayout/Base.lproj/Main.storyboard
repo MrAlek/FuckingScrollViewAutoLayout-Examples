@@ -26,9 +26,11 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z30-b7-IRY">
                                                 <rect key="frame" x="277" y="767" width="46" height="30"/>
                                                 <animations/>
-                                                <state key="normal" title="Button"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" red="0.52156862745098043" green="0.70588235294117641" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFl-Oc-zUR">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nFl-Oc-zUR" userLabel="Label">
                                                 <rect key="frame" x="20" y="8" width="560" height="751"/>
                                                 <animations/>
                                                 <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur augue nisi, ut placerat eros volutpat blandit. Morbi id tortor ac quam pretium egestas id eu nulla. Aliquam iaculis tellus eu luctus sollicitudin. Fusce vehicula elementum odio, vel aliquet justo suscipit sit amet. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc egestas massa ut aliquet mattis. Curabitur in vehicula nisl, posuere lobortis quam. Nulla posuere nisl sit amet arcu elementum eleifend. Sed lorem quam, volutpat nec urna in, pellentesque blandit quam. Vivamus in ornare dolor, ac vestibulum tellus.
@@ -46,33 +48,33 @@ Proin libero enim, fermentum et nisi nec, sagittis imperdiet leo. Vivamus at max
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="nFl-Oc-zUR" firstAttribute="top" secondItem="rxV-dV-WZo" secondAttribute="topMargin" id="1eK-LE-k77"/>
-                                            <constraint firstItem="z30-b7-IRY" firstAttribute="centerX" secondItem="rxV-dV-WZo" secondAttribute="centerX" id="DE3-Ra-XKH"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="nFl-Oc-zUR" secondAttribute="trailing" id="FDv-xd-kBc"/>
-                                            <constraint firstItem="nFl-Oc-zUR" firstAttribute="centerX" secondItem="rxV-dV-WZo" secondAttribute="centerX" id="XuB-su-h2X"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="z30-b7-IRY" secondAttribute="bottom" id="df5-2a-agn"/>
-                                            <constraint firstItem="nFl-Oc-zUR" firstAttribute="leading" secondItem="rxV-dV-WZo" secondAttribute="leadingMargin" id="jyZ-3I-YEg"/>
-                                            <constraint firstItem="z30-b7-IRY" firstAttribute="top" secondItem="nFl-Oc-zUR" secondAttribute="bottom" constant="8" id="zd0-wV-bGF"/>
+                                            <constraint firstItem="nFl-Oc-zUR" firstAttribute="top" secondItem="rxV-dV-WZo" secondAttribute="topMargin" id="1eK-LE-k77" userLabel="Step 4: Label.top = topMargin"/>
+                                            <constraint firstItem="z30-b7-IRY" firstAttribute="centerX" secondItem="rxV-dV-WZo" secondAttribute="centerX" id="DE3-Ra-XKH" userLabel="Step 4: Button.centerX = centerX"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="nFl-Oc-zUR" secondAttribute="trailing" id="FDv-xd-kBc" userLabel="Step 4: trailingMargin = Label.trailing"/>
+                                            <constraint firstItem="nFl-Oc-zUR" firstAttribute="centerX" secondItem="rxV-dV-WZo" secondAttribute="centerX" id="XuB-su-h2X" userLabel="Step 4: Label.centerX = centerX"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="z30-b7-IRY" secondAttribute="bottom" id="df5-2a-agn" userLabel="Step 4: bottomMargin = Button.bottom"/>
+                                            <constraint firstItem="nFl-Oc-zUR" firstAttribute="leading" secondItem="rxV-dV-WZo" secondAttribute="leadingMargin" id="jyZ-3I-YEg" userLabel="Step 4: Label.leading = leadingMargin"/>
+                                            <constraint firstItem="z30-b7-IRY" firstAttribute="top" secondItem="nFl-Oc-zUR" secondAttribute="bottom" constant="8" id="zd0-wV-bGF" userLabel="Step 4: Button.top = Label.bottom + 8"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="rxV-dV-WZo" secondAttribute="trailing" id="4vx-u5-FDg"/>
-                                    <constraint firstItem="rxV-dV-WZo" firstAttribute="top" secondItem="d3N-GW-h4p" secondAttribute="top" id="G46-7N-XZi"/>
-                                    <constraint firstItem="rxV-dV-WZo" firstAttribute="leading" secondItem="d3N-GW-h4p" secondAttribute="leading" id="hLW-DY-Yiz"/>
-                                    <constraint firstItem="rxV-dV-WZo" firstAttribute="width" secondItem="d3N-GW-h4p" secondAttribute="width" id="mqR-hQ-QTk"/>
-                                    <constraint firstAttribute="bottom" secondItem="rxV-dV-WZo" secondAttribute="bottom" id="oiQ-zs-kxz"/>
+                                    <constraint firstItem="rxV-dV-WZo" firstAttribute="trailing" secondItem="d3N-GW-h4p" secondAttribute="trailing" id="4vx-u5-FDg" userLabel="Step 2: Content View.trailing = trailing"/>
+                                    <constraint firstItem="rxV-dV-WZo" firstAttribute="top" secondItem="d3N-GW-h4p" secondAttribute="top" id="G46-7N-XZi" userLabel="Step 2: Content View.top = top"/>
+                                    <constraint firstItem="rxV-dV-WZo" firstAttribute="leading" secondItem="d3N-GW-h4p" secondAttribute="leading" id="hLW-DY-Yiz" userLabel="Step 2: Content View.leading = leading"/>
+                                    <constraint firstItem="rxV-dV-WZo" firstAttribute="width" secondItem="d3N-GW-h4p" secondAttribute="width" id="mqR-hQ-QTk" userLabel="Step 3: Content View.width = width"/>
+                                    <constraint firstItem="rxV-dV-WZo" firstAttribute="bottom" secondItem="d3N-GW-h4p" secondAttribute="bottom" id="oiQ-zs-kxz" userLabel="Step 2: Content View.bottom = bottom"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="d3N-GW-h4p" firstAttribute="leading" secondItem="XE9-rM-Tu6" secondAttribute="leading" id="MDa-rs-jVK"/>
-                            <constraint firstAttribute="bottom" secondItem="d3N-GW-h4p" secondAttribute="bottom" id="Qim-tl-jc6"/>
-                            <constraint firstItem="d3N-GW-h4p" firstAttribute="top" secondItem="XE9-rM-Tu6" secondAttribute="top" id="WS0-Rj-ZhS"/>
-                            <constraint firstAttribute="trailing" secondItem="d3N-GW-h4p" secondAttribute="trailing" id="v84-0q-99W"/>
+                            <constraint firstItem="d3N-GW-h4p" firstAttribute="leading" secondItem="XE9-rM-Tu6" secondAttribute="leading" id="MDa-rs-jVK" userLabel="Step 1: Scroll View.leading = leading"/>
+                            <constraint firstItem="d3N-GW-h4p" firstAttribute="bottom" secondItem="XE9-rM-Tu6" secondAttribute="bottom" id="Qim-tl-jc6" userLabel="Step 1: Scroll View.bottom = bottom"/>
+                            <constraint firstItem="d3N-GW-h4p" firstAttribute="top" secondItem="XE9-rM-Tu6" secondAttribute="top" id="WS0-Rj-ZhS" userLabel="Step 1: Scroll View.top = top"/>
+                            <constraint firstItem="d3N-GW-h4p" firstAttribute="trailing" secondItem="XE9-rM-Tu6" secondAttribute="trailing" id="v84-0q-99W" userLabel="Step 1:  Scroll View.trailing = trailing"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="IB Pure Autolayout" id="pLJ-kO-LM0"/>
@@ -146,21 +148,21 @@ Proin libero enim, fermentum et nisi nec, sagittis imperdiet leo. Vivamus at max
                                 </subviews>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="OCY-49-Na9" secondAttribute="trailing" id="4gf-S1-ThE"/>
-                                    <constraint firstItem="OCY-49-Na9" firstAttribute="bottom" secondItem="BCS-TZ-gi5" secondAttribute="bottom" id="MQz-JF-wbN"/>
-                                    <constraint firstItem="OCY-49-Na9" firstAttribute="width" secondItem="BCS-TZ-gi5" secondAttribute="width" id="Xxn-BJ-2GA"/>
-                                    <constraint firstItem="OCY-49-Na9" firstAttribute="leading" secondItem="BCS-TZ-gi5" secondAttribute="leading" id="df2-AS-0Ae"/>
-                                    <constraint firstItem="OCY-49-Na9" firstAttribute="top" secondItem="BCS-TZ-gi5" secondAttribute="topMargin" id="ozw-cb-IlY"/>
+                                    <constraint firstItem="OCY-49-Na9" firstAttribute="trailing" secondItem="BCS-TZ-gi5" secondAttribute="trailing" id="4gf-S1-ThE" userLabel="Step 2: Stack View.trailing = trailing"/>
+                                    <constraint firstItem="OCY-49-Na9" firstAttribute="bottom" secondItem="BCS-TZ-gi5" secondAttribute="bottom" id="MQz-JF-wbN" userLabel="Step 2: Stack View.bottom = bottom"/>
+                                    <constraint firstItem="OCY-49-Na9" firstAttribute="width" secondItem="BCS-TZ-gi5" secondAttribute="width" id="Xxn-BJ-2GA" userLabel="Step 3: Stack View.width = width"/>
+                                    <constraint firstItem="OCY-49-Na9" firstAttribute="leading" secondItem="BCS-TZ-gi5" secondAttribute="leading" id="df2-AS-0Ae" userLabel="Step 2: Stack View.leading = leading"/>
+                                    <constraint firstItem="OCY-49-Na9" firstAttribute="top" secondItem="BCS-TZ-gi5" secondAttribute="topMargin" id="ozw-cb-IlY" userLabel="Step 2: Stack View.top = topMargin"/>
                                 </constraints>
                             </scrollView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="BCS-TZ-gi5" firstAttribute="top" secondItem="1BR-J7-Kjm" secondAttribute="top" id="Ldu-xN-vzQ"/>
-                            <constraint firstAttribute="bottom" secondItem="BCS-TZ-gi5" secondAttribute="bottom" id="Tzp-Ku-qEt"/>
-                            <constraint firstItem="BCS-TZ-gi5" firstAttribute="leading" secondItem="1BR-J7-Kjm" secondAttribute="leading" id="m3S-iW-394"/>
-                            <constraint firstAttribute="trailing" secondItem="BCS-TZ-gi5" secondAttribute="trailing" id="rWT-fK-kyw"/>
+                            <constraint firstItem="BCS-TZ-gi5" firstAttribute="top" secondItem="1BR-J7-Kjm" secondAttribute="top" id="Ldu-xN-vzQ" userLabel="Step 1: Scroll View.top = top"/>
+                            <constraint firstItem="BCS-TZ-gi5" firstAttribute="bottom" secondItem="1BR-J7-Kjm" secondAttribute="bottom" id="Tzp-Ku-qEt" userLabel="Step 1: Scroll View.bottom = bottom"/>
+                            <constraint firstItem="BCS-TZ-gi5" firstAttribute="leading" secondItem="1BR-J7-Kjm" secondAttribute="leading" id="m3S-iW-394" userLabel="Step 1: Scroll View.leading = leading"/>
+                            <constraint firstItem="BCS-TZ-gi5" firstAttribute="trailing" secondItem="1BR-J7-Kjm" secondAttribute="trailing" id="rWT-fK-kyw" userLabel="Step 1: Scroll View.trailing = trailing"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="IB Stack View" id="A39-NH-wUb"/>

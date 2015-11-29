@@ -12,7 +12,7 @@ class PureCodeViewController : UIViewController {
     
     lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
-        scrollView.backgroundColor = UIColor.whiteColor()
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.preservesSuperviewLayoutMargins = true
         return scrollView
     }()
@@ -40,35 +40,57 @@ class PureCodeViewController : UIViewController {
         }()
     
     override func loadView() {
-        view = scrollView
-        scrollView.addSubview(contentView)
+        view = UIView()
+        view.backgroundColor = UIColor.whiteColor()
         
-        let views = ["contentView": contentView, "label": label, "button": button]
+        // Step 1: Place scroll view
+        view.addSubview(scrollView)
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "H:|-0-[scrollView]-0-|",
+            options: [],
+            metrics: nil,
+            views: ["scrollView": scrollView])
+        )
+        view.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
+            "V:|-0-[scrollView]-0-|",
+            options: [],
+            metrics: nil,
+            views: ["scrollView": scrollView])
+        )
+        
+        // Step 2: Place content container
+        scrollView.addSubview(contentView)
         scrollView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-0-[contentView]-0-|",
             options: [],
             metrics: nil,
-            views: views))
+            views: ["contentView": contentView])
+        )
         scrollView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-0-[contentView]-0-|",
             options: [],
             metrics: nil,
-            views: views))
+            views: ["contentView": contentView])
+        )
+        
+        // Step 3: Vertical scrolling
         scrollView.addConstraint(scrollView.widthAnchor.constraintEqualToAnchor(contentView.widthAnchor))
 
+        // Step 4: Add content
         contentView.addSubview(label)
         contentView.addSubview(button)
         
+        // Step 5: Make content push out on content container
         contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "H:|-[label]-|",
             options: [],
             metrics: nil,
-            views: views))
-        contentView.addConstraint(contentView.centerXAnchor.constraintEqualToAnchor(button.centerXAnchor))
+            views: ["label": label]))
+        contentView.addConstraint(button.centerXAnchor.constraintEqualToAnchor(contentView.centerXAnchor))
         contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat(
             "V:|-[label]-8-[button]-|",
             options: [],
             metrics: nil,
-            views: views))
+            views: ["label": label, "button": button]))
     }
 }
